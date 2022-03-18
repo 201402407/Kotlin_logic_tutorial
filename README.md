@@ -24,13 +24,18 @@
 
 <br>
 <details>
-  <summary> Companion Object </summary>
+  <summary> 기초 문법 모음 </summary>
   <br>
-  <p>base/CompanionObject.kt</p>
+  <p>base/BaseGrammer.kt</p>
+  <p>var/val</p>
+  <p>nullable(?와 !!)</p>
+  <p>조건식</p>
+  <p>Any와 instanceof</p>
 </details>
 <details>
   <summary> Companion Object </summary>
   <br>
+  <p>companion object는 간단하게, Java에서의 static한 느낌의 singleton object 라고 이해하면 된다.</p>
   <p>base/CompanionObject.kt</p>
 </details>
 
