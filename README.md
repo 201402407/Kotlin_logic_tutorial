@@ -31,6 +31,7 @@
   <p>nullable(?와 !!)</p>
   <p>조건식</p>
   <p>Any와 instanceof</p>
+  <p>When</p>
 </details>
 <details>
   <summary> Companion Object </summary>
