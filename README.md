@@ -32,6 +32,7 @@
   <p>조건식</p>
   <p>Any와 instanceof</p>
   <p>When</p>
+  <p>loop(for, while)</p>
 </details>
 <details>
   <summary> Companion Object </summary>

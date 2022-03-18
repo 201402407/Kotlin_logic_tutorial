@@ -61,6 +61,47 @@ class BaseGrammer {
                 else -> println("what is the obj's Type?")  // when은 무조건 하나의 결과를 리턴해야 하므로, else는 무조건 필요하다.
             }
         }
+
+        /* 6. loop(for, while) */
+        fun iteratorLoop() {
+            var tempList: ArrayList<String> = ArrayList()
+
+            // 기본적인 for loop
+            for(str in tempList) {
+                println(str)
+            }
+
+            // 1에서부터 5까지 순차적으로 증가
+            for(i in 1..5) {
+                print("$i ")
+            }
+            println()
+
+            // 10에서부터 2씩 감소
+            for(i in 10 downTo 1) {
+                print("$i ")
+            }
+            println()
+
+            // 1에서부터 10까지 2 간격으로 증가시키기(일정 간격으로 증가)
+            for(i in 1..10 step 2) {
+                print("$i ")
+            }
+            println()
+
+            // 5를 제외하고 1까지 감소하며 출력(끝 숫자 제외하고 출력)
+            for(i in 1 until 5) {
+                print("$i ")
+            }
+            println()
+
+            // while, do-while은 java와 동일
+            var a : Int = 1
+            while(a <= 10) {
+                print("${a++} ")
+            }
+            println()
+        }
     }
 
 
@@ -76,4 +117,6 @@ fun main() {
     BaseGrammer.casesUsedWhen("string")     // 5. when - "string" 대입
     BaseGrammer.casesUsedWhen(3L)           // 5. when - Long type 대입
     BaseGrammer.casesUsedWhen(true)         // 5. when - Boolean type 대입(else 탐)
+
+    BaseGrammer.iteratorLoop()                  // 6. loop(for, while)
 }
