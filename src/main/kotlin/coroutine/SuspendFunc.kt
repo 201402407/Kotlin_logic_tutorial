@@ -5,7 +5,7 @@ import kotlinx.coroutines.*
 class SuspendFunc {
 
     /* coroutine에서의 suspend란 ?
-     비동기 실행중인 coroutine 함수를 잠시 중지시키는 것.
+     비동기 실행중인 coroutine 함수를 잠시 중지시킬 수 있는 함수를 설정(표시)한 것.
 
      라이브러리 의존성(dependency) - "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"
      *** Logger 사용하지 않아서, 출력 결과 보지 못함.
