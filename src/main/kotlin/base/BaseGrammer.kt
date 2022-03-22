@@ -103,6 +103,35 @@ class BaseGrammer {
             println()
         }
 
+        /** 7. null과 not-null */
+        val name : String? = null   // nullable
+//        val id : String = name!!  // not-null. 그래서, name의 값은 null인데 not-null을 명시했으므로, NPE 발생.
+        val notNullStr : String = "null이 아닙니다."
+        val id : String = notNullStr!!  // null이 아니기 때문에, not-null 명시 가능
+
+        fun getId() = println(id)
+
+        // 안전 호출 연산자
+        fun getLength() {
+            val name : String? = null
+            println(name?.length)       // output : null
+
+            val id : String = "아이디"
+            println(id?.length)         // output : 아이디
+        }
+
+        // 엘비스 연산자
+        // 엘비스 연산자는 좌측의 코드가 null이 아니면 그 값을 리턴하고, null인 경우 우측의 값을 리턴한다.
+        fun elvisOperation() {
+            val name : String? = null
+            println(name ?: "NULL이었구나..")
+            println(name?.length ?: "length도 NULL이었구나..")
+
+            val id : String = "아이디"
+            println(id ?: "NULL이었구나 이것도..")
+
+            println(name?.length ?: id ?: "다 NULL이었어..?")
+        }
 
     }
 }
@@ -111,13 +140,22 @@ class BaseGrammer {
 fun main() {
     BaseGrammer.b = 4                           // 1. var는 변할 수 있음.
     BaseGrammer.nullableExample()               // 2. nullable test
+    println()
 
     BaseGrammer.getObj("String")            // 4. Any와 instanceof - parameter에 String Type 대입 시
     BaseGrammer.getObj(3)                   // 4. Any와 instanceof - parameter에 Int Type 대입 시
+    println()
 
     BaseGrammer.casesUsedWhen("string")     // 5. when - "string" 대입
     BaseGrammer.casesUsedWhen(3L)           // 5. when - Long type 대입
     BaseGrammer.casesUsedWhen(true)         // 5. when - Boolean type 대입(else 탐)
+    println()
 
     BaseGrammer.iteratorLoop()                  // 6. loop(for, while)
+    println()
+
+    BaseGrammer.getId()                         // 7. null과 not-null
+    BaseGrammer.getLength()                     // 7. null과 not-null - 안전 호출 연산자
+    BaseGrammer.elvisOperation()                // 7. null과 not-null - 엘비스 연산자
+
 }

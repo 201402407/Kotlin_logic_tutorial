@@ -15,7 +15,7 @@ class CompanionObject {
     }
      */
 
-    // case 3. companion object interface 구현
+    /** case 3. companion object interface 구현 */
     companion object: TempInterface {
         override fun temp() {
             println("companion object 로도 인터페이스를 구현할 수 있따!")

@@ -9,7 +9,7 @@ class Vararg {
     companion object {
 
         /** Java as-is
-        * Java는 Overroding이 가능하기 때문에, 아래 코드와 같이 함수 선언이 가능하다.
+        * Java는 Overloading이 가능하기 때문에, 아래 코드와 같이 함수 선언이 가능하다.
         * 하지만, 아래처럼 int parameter의 개수가 몇 개가 들어올 지 모르는데 예상 가능한 개수만큼 함수를 선언할 수는 없다.
         * */
 //        int sum(int a) {}
