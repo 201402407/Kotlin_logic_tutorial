@@ -47,7 +47,7 @@ fun main() {
      * Array<Int>로 변경해야한다. */
     val nums = intArrayOf(1, 2, 3, 4, 5, 6, 7)
     val nums2: Array<Int> = arrayOf(1, 2, 3, 4, 5, 6, 7)
-//    Vararg.sum(nums)    // error(Type mismatch!)
+//    sum(nums)    // error(Type mismatch!)
     sum(*nums)
     sum(*nums2.toIntArray())
 
