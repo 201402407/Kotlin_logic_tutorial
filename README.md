@@ -55,6 +55,17 @@
   <p>base/BaseClass.kt</p>
 </details>
 <details>
+  <summary> Scope function </summary>
+  <br>
+  <p>Scope function은 상위 Context Object를 코드 블럭 내에서 활용해 만들고, 이를 실행할 수 있게 하는 함수.</p>
+  <p>let</p>
+  <p>run</p>
+  <p>apply</p>
+  <p>also</p>
+  <p>with</p>
+  <p>base/Scope.kt</p>
+</details>
+<details>
   <summary> vararg </summary>
   <br>
   <p>가변인자. 즉, 매개변수의 개수를 동적으로 지정해 줄 수 있게 하는 변수.</p>
