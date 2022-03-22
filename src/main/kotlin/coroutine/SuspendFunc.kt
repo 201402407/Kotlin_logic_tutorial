@@ -4,7 +4,7 @@ import kotlinx.coroutines.*
 
 class SuspendFunc {
 
-    /* coroutine에서의 suspend란 ?
+    /** coroutine에서의 suspend란 ?
      비동기 실행중인 coroutine 함수를 잠시 중지시킬 수 있는 함수를 설정(표시)한 것.
 
      라이브러리 의존성(dependency) - "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"
@@ -23,7 +23,7 @@ class SuspendFunc {
 
     companion object {
 
-        /* 1. suspend function 사용하지 않은 코드 */
+        /** 1. suspend function 사용하지 않은 코드 */
         fun notSuspendFunc1() {
             // Thread.sleep()은 suspend 함수가 아님.
             Thread.sleep(1000)
@@ -45,7 +45,7 @@ class SuspendFunc {
             println { "[Not Suspend] End in (${Thread.currentThread().name})" }
         }
 
-        /* 2. suspend function 사용한 코드 */
+        /** 2. suspend function 사용한 코드 */
         suspend fun suspendFunc1() {
             // delay() 자체는 suspend 함수이기 때문에, 반드시 suspend function에 사용할 수 있음.
             delay(1000)

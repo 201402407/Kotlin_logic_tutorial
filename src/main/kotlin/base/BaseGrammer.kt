@@ -3,11 +3,11 @@ package base
 class BaseGrammer {
 
     companion object {
-        /* 1. val/var */
+        /** 1. val/var */
         val a : Int = 1 // val : read-only 변수. 즉, 변할 수 없는 변수. (java의 final, C/C++/typescript의 const)
         var b : Int = 1 // var : 기본적인 변수. 즉, 변할 수 있는 변수.
 
-        /* 2. nullable(?와 !!) */
+        /** 2. nullable(?와 !!) */
         fun nullableExample() {
             /* fail case
             // ?가 없기 때문에, aa 변수는 무조건 null이 들어올 수 없다.
@@ -23,7 +23,7 @@ class BaseGrammer {
 //            println("${bb!!}")  // !!를 붙이면 null 인 경우, NPE 에러 발생시킨다. 이같은 경우에는 bb 변수 값이 null이므로 NPE 에러 발생.
         }
 
-        /* 3. 조건식 */
+        /** 3. 조건식 */
         // 기본 조건식
         fun conditionFunc(a: Int, b: Int): Int {
             if(a > b) {
@@ -35,7 +35,7 @@ class BaseGrammer {
         // return 생략 조건식
         fun conditionBetterFunc(a: Int, b: Int): Int = if(a > b) a else b   // return 및 대괄호 생략 가능. 가독성 높아짐.
 
-        /* 4. Any와 instanceof */
+        /** 4. Any와 instanceof */
         fun getObj(obj: Any): Int? {
             if(obj is String) { // is는 Java의 instanceof 와 같다. Type을 확인하는 연산자.
                 println("parameter로 받은 obj의 Type은 String 입니다.")
@@ -49,7 +49,7 @@ class BaseGrammer {
             return null // Int?로 리턴 가능하기 때문에 null도 리턴할 수 있다.
         }
 
-        /* 5. When */
+        /** 5. When */
         // if 문을 반복해서 사용하지 않고, when을 활용해 간단한 조건 / 결과 코드로 작성할 수 있음. 즉, if-else if-else를 when으로 표현한 것.
         // java의 switch와도 동일한 기능.
         fun casesUsedWhen(obj: Any) {
@@ -62,7 +62,7 @@ class BaseGrammer {
             }
         }
 
-        /* 6. loop(for, while) */
+        /** 6. loop(for, while) */
         fun iteratorLoop() {
             var tempList: ArrayList<String> = ArrayList()
 
@@ -105,12 +105,11 @@ class BaseGrammer {
 
 
     }
-
-
 }
 
 /* TEST */
 fun main() {
+    BaseGrammer.b = 4                           // 1. var는 변할 수 있음.
     BaseGrammer.nullableExample()               // 2. nullable test
 
     BaseGrammer.getObj("String")            // 4. Any와 instanceof - parameter에 String Type 대입 시

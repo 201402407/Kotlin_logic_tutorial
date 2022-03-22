@@ -1,14 +1,14 @@
 package base
 
 class CompanionObject {
-    // companion object: static한 느낌의 singleton object
-    /* case 1. default companion object
+    /** companion object: static한 느낌의 singleton object */
+    /** case 1. default companion object
     companion object {
         const val URL_PATH = "/sample"
     }
      */
 
-    /* case 2. companion object에 이름 생성 가능
+    /** case 2. companion object에 이름 생성 가능
     companion object Temp {
         const val URL_PATH = "/sample"
         const val TEMP_VALUE = 2
