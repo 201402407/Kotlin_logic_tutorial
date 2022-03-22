@@ -57,7 +57,6 @@
 <details>
   <summary> vararg </summary>
   <br>
-  <p>suspend function</p>
   <p>가변인자. 즉, 매개변수의 개수를 동적으로 지정해 줄 수 있게 하는 변수.</p>
   <p>base/Vararg.kt</p>
 </details>
