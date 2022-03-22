@@ -40,6 +40,20 @@
   <p>companion object는 간단하게, Java에서의 static한 느낌의 singleton object 라고 이해하면 된다.</p>
   <p>base/CompanionObject.kt</p>
 </details>
+<details>
+  <summary> vararg </summary>
+  <br>
+  <p>suspend function</p>
+  <p>가변인자. 즉, 매개변수의 개수를 동적으로 지정해 줄 수 있게 하는 변수.</p>
+  <p>base/Vararg.kt</p>
+</details>
+<details>
+  <summary> Coroutine </summary>
+  <br>
+  <p>suspend function</p>
+  <p>비동기 실행중인 coroutine 함수를 잠시 중지시킬 수 있는 함수를 설정(표시)한 것.</p>
+  <p>coroutine/SuspendFunc.kt</p>
+</details>
 
 ## 3. Tutorial Description
 
