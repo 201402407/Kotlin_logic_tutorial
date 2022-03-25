@@ -133,6 +133,34 @@ class BaseGrammer {
             println(name?.length ?: id ?: "다 NULL이었어..?")
         }
 
+        /** 8. object */
+        /** object는 java에서의 싱글톤 패턴이라고 생각하면 된다.
+         * Java에서는 instance를 활용하여 멤버 객체 하나만 생성해두고, 이를 여러 곳에서 활용하는 방식으로 코딩했다면,
+         * Kotlin에서는 object 하나만으로 위 싱글톤 패턴을 간편하게 구현할 수 있다.
+         * 대신, 런타임 시 object의 인스턴스가 생성되기 때문에, 메모리 측면에서 이슈가 있을 수 있다.
+         * -> 인스턴스 생성(초기화) 시점 조정을 위해 by lazy, lateinit 사용 */
+        object TempObject {
+            val temp: String = "TEMP STRING"
+        }
+
+        // java 에서의 코드
+        /*
+        class TempObject {
+            static Object obj;
+
+            TempObject() {
+
+            }
+
+            public static synchronized Object getInstance() {
+                if(this.obj == null) {
+                    this.obj = new Object();
+                }
+
+                return this.obj;
+            }
+        }
+         */
     }
 }
 

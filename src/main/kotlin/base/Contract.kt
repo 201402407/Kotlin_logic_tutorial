@@ -1,0 +1,4 @@
+package base
+
+class Contract {
+}

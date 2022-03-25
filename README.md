@@ -26,20 +26,28 @@
 <details>
   <summary> 기초 문법 모음 </summary>
   <br>
-  <p>1. base/BaseGrammer.kt</p>
-  <p>2. var/val</p>
-  <p>3. nullable(?와 !!)</p>
-  <p>4. 조건식</p>
-  <p>5. Any와 instanceof</p>
-  <p>6. When</p>
-  <p>7. loop(for, while)</p>
-  <p>8. null과 not-null(안전 호출, 엘비스 연산자)</p>
+  <p>1. var/val</p>
+  <p>2. nullable(?와 !!)</p>
+  <p>3. 조건식</p>
+  <p>4. Any와 instanceof</p>
+  <p>5. When</p>
+  <p>6. loop(for, while)</p>
+  <p>7. null과 not-null(안전 호출, 엘비스 연산자)</p>
+  <p>8. object</p>
+  <p>base/BaseGrammer.kt</p>
 </details>
 <details>
   <summary> Companion Object </summary>
   <br>
   <p>companion object는 간단하게, Java에서의 static한 느낌의 singleton object 라고 이해하면 된다.</p>
   <p>base/CompanionObject.kt</p>
+</details>
+<details>
+  <summary> by lazy와 lateinit </summary>
+  <br>
+  <p>lateinit은 처음 값의 Type만 지정해주고, 실제 값까지 함께 선언하지 않는다. 이후에 값을 지정해줘야 함</p>
+  <p>by lazy는 read-only 느낌으로, 변할 수 있는 값을 활용해 고정 값을 대입할 때 주로 사용된다. val만 선언 가능</p>
+  <p>base/Lazy.kt</p>
 </details>
 <details>
   <summary> 기초적인 Class 선언 </summary>
