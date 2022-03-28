@@ -65,12 +65,13 @@
 <details>
   <summary> Scope function </summary>
   <br>
-  <p>Scope function은 상위 Context Object를 코드 블럭 내에서 활용해 만들고, 이를 실행할 수 있게 하는 함수.</p>
+  <p>Scope function은 상위 Context Object를 코드 블럭 내에서 활용해 만들고, 이를 실행할 수 있게 하는 함수. (자유롭게 연계 가능)</p>
   <p>let</p>
   <p>run</p>
   <p>apply</p>
   <p>also</p>
   <p>with</p>
+  <p>takeIf / takeUnless</p>
   <p>base/Scope.kt</p>
 </details>
 <details>

@@ -82,11 +82,66 @@ class Scope {
             println("${name}이 함께 인사합니다.")
             println(greetingMessage(this))
         }
+
+        /** takeIf
+         * 조건 함수가 true일 때, T를 리턴하며 false일 경우 null을 리턴
+         * T.takeIf{} 로 활용
+         * Context Object: it
+         */
+        fun takeIf() : User {
+            val user = User("name", 10)
+            // 가장 기본적인 코드
+            if(user != null && user.status) {
+                // doThis()
+            }
+
+            // 조금 개선
+            if(user?.status) {
+                // doThis()
+            }
+
+            // if 생략하고 가독성 증가
+            user?.takeIf { it.status }?.apply { // 이 때, ?.를 사용하지 않으면 takeIf의 결과가 null이든 아니든 apply를 호출된다.
+                // doThis()
+            }
+
+            // 또 다른 예시
+            // user 객체의 id가 Null 또는 Blank인 경우에는 기존의 user 객체를 리턴하고, id에 값이 존재하면 새로운 User 객체를 리턴한다.
+            return user?.takeIf { it.id.isNullOrBlank() } ?: User("name", 20)
+        }
+
+        /** takeUnless
+         * 조건 함수가 false일 때, T를 리턴하며 true일 경우 null을 리턴(takeIf와 반대)
+         * T.takeUnless{} 로 활용
+         * Context Object: it
+         */
+        fun takeUnless() : User {
+            val user = User("name", 10)
+            // 가장 기본적인 코드
+            if(user != null && user.status) {
+                // doThis()
+            }
+
+            // 조금 개선
+            if(user?.status) {
+                // doThis()
+            }
+
+            // if 생략하고 가독성 증가
+            user?.takeUnless { !it.status }?.apply { // 이 때, ?.를 사용하지 않으면 takeIf의 결과가 null이든 아니든 apply를 호출된다.
+                // doThis()
+            }
+
+            // 또 다른 예시
+            // user 객체의 id가 Null 또는 Blank인 경우에는 새로운 User 객체를 리턴하고, id에 값이 존재하면 기존의 user 객체를 리턴한다.
+            return user?.takeUnless { it.id.isNullOrBlank() } ?: User("name", 20)
+        }
     }
 }
 
 class User(var name: String, var age: Int) {
     var id: String = ""
+    var status: Boolean = false
 }
 
 fun main() {
@@ -104,4 +159,7 @@ fun main() {
 
     Scope.withGreeting                  // with
     println()
+
+    println("[takeIf] wanted: 10 , result: ${Scope.takeIf().age}")             // takeIf
+    println("[takeUnless] wanted: 20 , result: ${Scope.takeUnless().age}")         // takeUnless
 }
