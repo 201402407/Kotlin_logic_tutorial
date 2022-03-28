@@ -87,6 +87,19 @@
   <p>비동기 실행중인 coroutine 함수를 잠시 중지시킬 수 있는 함수를 설정(표시)한 것.</p>
   <p>coroutine/SuspendFunc.kt</p>
 </details>
+<details>
+  <summary> Annotations </summary>
+  <br>
+  <p>Kotlin -> Java로 컴파일되는 과정에서 활용되는 Annotations.</p>
+  <p>@JvmField</p>
+  <p>@JvmStatic</p>
+  <p>@JvmName</p>
+  <p>@Throws</p>
+  <p>@JvmOverloads</p>
+  <p>@JvmInline</p>
+  <p>(특별추가) value class</p>
+  <p>jvm/Annotations.kt</p>
+</details>
 
 ## 3. Tutorial Description
 
