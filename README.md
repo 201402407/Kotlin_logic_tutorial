@@ -75,6 +75,14 @@
   <p>base/Scope.kt</p>
 </details>
 <details>
+  <summary> Reified / inline </summary>
+  <br>
+  <p>Reified는 Kotlin -> Java의 Runtime 시점에 Generic Type을 알고 싶을 때 사용. Reified를 사용하게 되면 Generic Class Type 정보까지 함께 전달 가능</p>
+  <p>(참고) 무조건 inline 과 함께 사용해야 한다.</p>
+  <p>inline function는 inline function은 kotlin -> java의 컴파일 단계에서 "함수 호출 = invoke" 방식이 아닌 "코드 복사" 방식으로 코드 변환해줌.</p>
+  <p>base/Reified.kt</p>
+</details>
+<details>
   <summary> vararg </summary>
   <br>
   <p>가변인자. 즉, 매개변수의 개수를 동적으로 지정해 줄 수 있게 하는 변수.</p>
