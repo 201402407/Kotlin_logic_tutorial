@@ -83,6 +83,13 @@
   <p>base/Reified.kt</p>
 </details>
 <details>
+  <summary> sealed class </summary>
+  <br>
+  <p>sealed class를 super class로 하는 하위 클래스(child class)의 종류를 제한하고, 이를 컴파일러에게 알려주기 위해 사용.</p>
+  <p>-> Enum과의 가장 큰 차이점은, Enum은 single instance 이지만, sealed class는 여러 개의 하위 클래스 객체를 생성할 수 있다.</p>
+  <p>base/Sealed.kt</p>
+</details>
+<details>
   <summary> vararg </summary>
   <br>
   <p>가변인자. 즉, 매개변수의 개수를 동적으로 지정해 줄 수 있게 하는 변수.</p>
