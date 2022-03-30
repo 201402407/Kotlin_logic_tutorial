@@ -90,17 +90,17 @@
   <p>base/Sealed.kt</p>
 </details>
 <details>
+  <summary> vararg </summary>
+  <br>
+  <p>가변인자. 즉, 매개변수의 개수를 동적으로 지정해 줄 수 있게 하는 변수.</p>
+  <p>base/Vararg.kt</p>
+</details>
+<details>
   <summary> contract / callsInPlace </summary>
   <br>
   <p>contract는 함수가 컴파일러가 이해하는 방식으로 동작을 명시적으로 설명할 수 있도록 한다.</p>
   <p>callsInPlace는  람다 함수를 사용할 때, 그 함수의 호출 횟수를 명시적으로 컴파일러에게 이해시켜주기 위해 사용</p>
   <p>contract/Contract.kt</p>
-</details>
-<details>
-  <summary> vararg </summary>
-  <br>
-  <p>가변인자. 즉, 매개변수의 개수를 동적으로 지정해 줄 수 있게 하는 변수.</p>
-  <p>base/Vararg.kt</p>
 </details>
 <details>
   <summary> Coroutine </summary>
