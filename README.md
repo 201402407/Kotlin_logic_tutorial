@@ -78,6 +78,14 @@
   <p>base/Scope.kt</p>
 </details>
 <details>
+  <summary> by로 Delegate Pattern을 쉽게 구현 </summary>
+  <br>
+  <p>Delegate Pattern은 디자인 패턴 중 하나로, 어떤 기능을 자신이 처리하지 않고 다른 객체(대리인)에 위임시켜서 그 객체가 일을 처리하도록 하는 것</p>
+  <p>다른 객체(대리인)가 만들어놓은 방식(코드) 그대로 가져와서 사용해야하는데, 인터페이스다보니 사용할 때마다 그대로 코드를 가져오는 것은 낭비.</p>
+  <p>-> by 키워드를 통해 interface를 구현한 parameter 객체의 코드를 그대로 가져올 필요가 없고, overriding하지 않아도 된다.</p>
+  <p>base/Delegate.kt</p>
+</details>
+<details>
   <summary> Reified / inline </summary>
   <br>
   <p>Reified는 Kotlin -> Java의 Runtime 시점에 Generic Type을 알고 싶을 때 사용. Reified를 사용하게 되면 Generic Class Type 정보까지 함께 전달 가능</p>
