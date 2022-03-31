@@ -96,6 +96,12 @@
   <p>base/Vararg.kt</p>
 </details>
 <details>
+  <summary> enum </summary>
+  <br>
+  <p>Enum은 Kotlin에선, Comparable Interface를 구현하는 Abstarct class.</p>
+  <p>base/Enum.kt</p>
+</details>
+<details>
   <summary> contract / callsInPlace </summary>
   <br>
   <p>contract는 함수가 컴파일러가 이해하는 방식으로 동작을 명시적으로 설명할 수 있도록 한다.</p>

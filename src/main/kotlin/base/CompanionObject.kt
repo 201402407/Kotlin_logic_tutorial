@@ -23,6 +23,16 @@ class CompanionObject {
     }
 }
 
+/** case 4. 추상 클래스에서도 companion object 사용 가능 */
+abstract class AbstractClass {
+    companion object {
+        val temp: String = "TEMP"
+        private fun getAbstractTemp(): String {
+            return this.temp
+        }
+    }
+}
+
 fun main() {
     println("[QUESTION 1] companion object 란?")
     println("companion object는 간단하게, Java에서의 static한 느낌의 singleton object 라고 이해하면 된다.")
