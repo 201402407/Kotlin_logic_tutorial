@@ -195,6 +195,42 @@ class BaseGrammer {
          * -> Companion object 또는 object 에서만 선언이 가능하다.
          */
         const val MAX_VALUE: Int = 2000
+
+        /**
+         * 11. Destructuring Declaration
+         * 어떤 객체의 데이터들을 변수들에 대입하는 기술.
+         * Data class일 때, Destructuring Declaration을 지원해주며 몇몇 메소드를 자동으로 제공받게 되서, 이런 코딩이 가능하다.
+         * 반면, 다른 기본적인 class는 별도로 operator method로 component1~N() 메소드를 구현해줘야 한다.
+         *
+         * 즉, Destructuring Declaration는 data class에서 자동으로 component1~N() 메소드를 구현해주고,
+         * 이 함수들을 사용하는 것으로 자바 코드로 변환된다.
+         */
+        fun destructuring() {
+            data class Person(val name: String, val age: Int)
+            val person = Person("이해원", 28)
+            val (name, age) = person    // ()로 변수 묶어서 선언 가능
+            println("이름 : $name , 나이 : $age")
+
+            var persons = arrayListOf<Person>()
+            persons.add(Person("이해원", 28))
+            persons.add(Person("이해투", 29))
+            persons.add(Person("이해삼", 30))
+
+            /** for문 사용 예제 */
+            for((name, age) in persons) {
+                println("이름 : $name , 나이 : $age")
+            }
+            /** 안쓰는 변수는 _로 생략 가능 */
+            for((_, age) in persons) {
+                println("나이 : $age")
+            }
+
+            /** Map에도 사용 가능 */
+            persons.map { (name, age) ->
+                println("이름 : $name , 나이 : $age")
+            }
+        }
+
     }
 //    const val TEMP: String = "ASD"  // companion object나 object에서만 const val 선언 가능.
 }
