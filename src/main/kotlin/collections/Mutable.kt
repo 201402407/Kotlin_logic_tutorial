@@ -17,5 +17,9 @@ class Mutable {
         tempList.add(80)
         tempList.remove(50)
         tempList.removeAt(0)
+
+        /** arrayListOf는 Mutable */
+        val tempList2 = arrayListOf<Int>(50, 60, 10)  
+        tempList2.add(20)
     }
 }
