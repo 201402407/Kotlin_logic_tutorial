@@ -161,6 +161,33 @@ class BaseGrammer {
             }
         }
          */
+
+        /**
+         * 9. pair와 triple
+         * pair는 2개의 객체를 저장할 수 있는 하나의 객체
+         * triple은 3개의 객체를 저장할 수 있는 하나의 객체
+         */
+        /* Pair */
+        val pair1 = Pair("PAIR", 1234)
+        val pair2 = "HELLO" to "WORLD"
+
+        /* pair의 각 객체를 가리키는 방법 2가지 */
+        fun pairSample(pair: Pair<String, String>): Pair<String, String> {
+            val (hello, world) = "HELLO" to "WORLD" // 새로운 변수 정의
+            val list = pair2.toList()   // List 변환 가능
+            println("pair1 1번 째 객체: ${pair1.first} 이고, 2번 째 객체: ${pair1.second} 이다.")
+            println("pair2 1번 째 객체: ${pair2.component1()} 이고, 2번 째 객체: ${pair2.component2()} 이다.")
+            return pair
+        }
+
+        /* Triple */
+        val triple = Triple<String, String, Int>("HELLO", "WORLD", 505050)
+        fun tripleSample(triple: Triple<String, String, Int>): Triple<String, String, Int> {
+            val list = triple.toList()
+            println("triple 1번 째 객체: ${triple.first} 이고, 2번 째 객체: ${triple.second} 이고, 3번 째 객체: ${triple.third} 이다.")
+            println("triple 1번 째 객체: ${triple.component1()} 이고, 2번 째 객체: ${triple.component2()} 이고, 3번 째 객체: ${triple.component3()} 이다.")
+            return triple
+        }
     }
 }
 
@@ -185,5 +212,8 @@ fun main() {
     BaseGrammer.getId()                         // 7. null과 not-null
     BaseGrammer.getLength()                     // 7. null과 not-null - 안전 호출 연산자
     BaseGrammer.elvisOperation()                // 7. null과 not-null - 엘비스 연산자
+
+    BaseGrammer.pairSample(BaseGrammer.pair2)   // 9. pair와 triple
+    BaseGrammer.tripleSample(BaseGrammer.triple)// 9. pair와 triple
 
 }
