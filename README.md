@@ -56,7 +56,7 @@
   <br>
   <p>case 1. default 선언</p>
   <p>case 2. 생성자의 parameter가 없을 경우 () 생략 가능</p>
-  <p>case 3. class parameter에 var/val 변수를 선언하면, 클래스 내부 멤버변수 및 생성자 선언을 동시에 할 수 있다.</p>
+  <p>case 3. class parameter에 var/val 변수를 선언하면, 클래스 내부 멤버변수 및 생성자 선언을 동시에 할 d수 있다.</p>
   <p>case 4. class parameter에 일반 변수를 받게 되면, 클래스 내부 멤버변수로 선언되지 않는다.</p>
   <p>case 5. class parameter로 받은 일반 변수 값을 클래스 내부 멤버변수에 초기화한다.</p>
   <p>case 6. init(기본 생성자가 호출된 직후 바로 실행되는 코드 블럭</p>
@@ -109,6 +109,13 @@
   <p>contract는 함수가 컴파일러가 이해하는 방식으로 동작을 명시적으로 설명할 수 있도록 한다.</p>
   <p>callsInPlace는  람다 함수를 사용할 때, 그 함수의 호출 횟수를 명시적으로 컴파일러에게 이해시켜주기 위해 사용</p>
   <p>contract/Contract.kt</p>
+</details>
+<details>
+  <summary> collections / sequences </summary>
+  <br>
+  <p>collections : eager evaluation. 즉시 실행</p>
+  <p>sequences : lazy evaluation. 늦은 실행. kotlin에서 Collections와 마찬가지로 Iterable한 자료구조</p>
+  <p>collections/Sequences.kt</p>
 </details>
 <details>
   <summary> Coroutine </summary>
