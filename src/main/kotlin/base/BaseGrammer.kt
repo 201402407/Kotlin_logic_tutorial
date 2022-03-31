@@ -188,7 +188,15 @@ class BaseGrammer {
             println("triple 1번 째 객체: ${triple.component1()} 이고, 2번 째 객체: ${triple.component2()} 이고, 3번 째 객체: ${triple.component3()} 이다.")
             return triple
         }
+
+        /**
+         * 10. const val
+         * runtime이 아니라 compile time에 할당됨. 그렇기 때문에, 오직 문자열이나 기본 타입으로만 선언 가능.
+         * -> Companion object 또는 object 에서만 선언이 가능하다.
+         */
+        const val MAX_VALUE: Int = 2000
     }
+//    const val TEMP: String = "ASD"  // companion object나 object에서만 const val 선언 가능.
 }
 
 /* TEST */

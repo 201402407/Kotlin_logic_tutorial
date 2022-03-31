@@ -34,6 +34,8 @@
   <p>6. loop(for, while)</p>
   <p>7. null과 not-null(안전 호출, 엘비스 연산자)</p>
   <p>8. object</p>
+  <p>9. pair와 triple</p>
+  <p>10. const val</p>
   <p>base/BaseGrammer.kt</p>
 </details>
 <details>
