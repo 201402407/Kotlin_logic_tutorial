@@ -63,6 +63,10 @@
   <p>case 6. init(기본 생성자가 호출된 직후 바로 실행되는 코드 블럭</p>
   <p>case 7. constructor(보조 생성자. 추가적인 생성자 함수를 작성하고 싶을 때 활용)</p>
   <p>case 8. class parameter에 받은 일반 변수의 Default 값 설정 가능.</p>
+  <p>case 9. open class</p>
+  <p>case 10. 상속과 구현 차이</p>
+  <p>case 11. protected 및 internal</p>
+  <p>case 12. nested class / inner class</p>
   <p>base/BaseClass.kt</p>
 </details>
 <details>
