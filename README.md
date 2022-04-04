@@ -67,6 +67,7 @@
   <p>case 10. 상속과 구현 차이</p>
   <p>case 11. protected 및 internal</p>
   <p>case 12. nested class / inner class</p>
+  <p>case 13. data class</p>
   <p>base/BaseClass.kt</p>
 </details>
 <details>

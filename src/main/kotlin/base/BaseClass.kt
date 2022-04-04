@@ -112,7 +112,7 @@ open class BaseClass11Parent {
     val d = 4   // default는 public
 
     /** case 12. nested class / inner class
-     * 중첩 클래스는 class 안에 class를 선언한 것.(inner 선언 X)
+     * 중첩 클래스는 class 안에 class를 선언한 것.(inner 선언 X) -> java에서는 static class이고 여기서는 static 생략.
      */
     protected class Nested {
         val e: Int = 5  // public default(private는 외부에서 접근 불가능. Java는 가능)
@@ -153,6 +153,14 @@ class OuterClass(val obj: BaseClass11Parent) {
         println(obj.NestedInner().f)    /** public inner class 접근 가능. */
     }
 }
+
+/** case 13. data class
+ * DTO(POJOs / POCOs)에 주로 활용되는 class
+ * 모든 property에 대해 getter(var 변수는 setter) 제공
+ * equals() / hashCode() / toString() / copy() 함수 제공
+ * componentN() 함수 제공
+ */
+data class BaseClass13(val name: String, var temp: Int, val email: String)
 
 
 fun main() {
