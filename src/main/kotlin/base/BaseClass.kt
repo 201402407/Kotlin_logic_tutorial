@@ -1,7 +1,5 @@
 package base
 
-import sun.jvm.hotspot.HelloWorld.e
-
 /** 기본 클래스 선언. public 생략 가능(default) */
 class BaseClass {
 
@@ -111,6 +109,10 @@ open class BaseClass11Parent {
     internal val c = 3
     val d = 4   // default는 public
 
+    open fun temp() {
+        println("parent's function!")
+    }
+
     /** case 12. nested class / inner class
      * 중첩 클래스는 class 안에 class를 선언한 것.(inner 선언 X) -> java에서는 static class이고 여기서는 static 생략.
      */
@@ -125,13 +127,15 @@ open class BaseClass11Parent {
         val f: Int = 6
     }
 }
+
 class Subclass: BaseClass11Parent() {
     /** private 접근 불가능. */
     /** protected 접근 가능. -> overriding 필요 */
     override val b: Int
         get() = super.b
 
-    fun temp() {
+    override fun temp() {
+        println("child's function!")
         println(c)  /** internal 접근 가능. 같은 모듈이기 때문에. */
         println(d)  /** public 접근 가능. */
         println(Nested().e) /** nested class(중첩 클래스) 접근 가능. 단, 객체 생성 필요 */
@@ -141,6 +145,15 @@ class Subclass: BaseClass11Parent() {
 //        BaseClass11Parent().Nested().e // 불가능
         BaseClass11Parent().NestedInner().f /** (inner class 붙인 경우) 외부 클래스 객체 생성 후 inner class 객체로 접근 가능 */
 //        BaseClass11Parent.NestedInner().f   // 불가능
+    }
+
+    /** case 13. inner class의 outer class 자원 사용 방법 */
+    inner class SubInner {
+        fun tempInner() {
+            Subclass().temp()       /** outer class인 SubClass의 함수 temp() 호출 */
+            super@Subclass.temp()   /** outer class의 super class인 BaseClass11Parent의 함수 temp() 호출 */
+            super@Subclass.c        /** outer class의 super class인 BaseClass11Parent의 변수 c 호출 가능 */
+        }
     }
 }
 class OuterClass(val obj: BaseClass11Parent) {
@@ -154,7 +167,7 @@ class OuterClass(val obj: BaseClass11Parent) {
     }
 }
 
-/** case 13. data class
+/** case 14. data class
  * DTO(POJOs / POCOs)에 주로 활용되는 class
  * 모든 property에 대해 getter(var 변수는 setter) 제공
  * equals() / hashCode() / toString() / copy() 함수 제공

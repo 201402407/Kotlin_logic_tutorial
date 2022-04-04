@@ -26,6 +26,12 @@ class BaseGrammer {
         /** 3. 조건식 */
         // 기본 조건식
         fun conditionFunc(a: Int, b: Int): Int {
+            // 특정 element가 collection에 존재하는지 체크
+            var tempList = arrayListOf<String>("lee", "hae", "won")
+            if("lee" in tempList) {
+                println("found it")
+            }
+            
             if(a > b) {
                 return a
             }
@@ -34,6 +40,7 @@ class BaseGrammer {
         }
         // return 생략 조건식
         fun conditionBetterFunc(a: Int, b: Int): Int = if(a > b) a else b   // return 및 대괄호 생략 가능. 가독성 높아짐.
+
 
         /** 4. Any와 instanceof */
         fun getObj(obj: Any): Int? {
@@ -231,12 +238,36 @@ class BaseGrammer {
             }
         }
 
+        /**
+         * 12. 변수 값으로 활용할 수 있는 try/catch 와 if절
+         */
+        fun temp12(num: Int) {
+            // if구문을 변수 값으로 사용
+            var temp = if (num == 1) {
+                "one"
+            }
+            else {
+                "temp"
+            }
+
+            // try/catch를 변수 값으로 사용
+            var temp2 = try {
+                println("temp")
+            }catch (e: RuntimeException) {
+                throw RuntimeException(e)
+            }
+        }
+
+
     }
 //    const val TEMP: String = "ASD"  // companion object나 object에서만 const val 선언 가능.
 }
 
 /* TEST */
 fun main() {
+
+    BaseGrammer.conditionFunc(1, 2)
+
     BaseGrammer.b = 4                           // 1. var는 변할 수 있음.
     BaseGrammer.nullableExample()               // 2. nullable test
     println()

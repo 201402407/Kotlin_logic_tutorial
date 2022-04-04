@@ -37,6 +37,7 @@
   <p>9. pair와 triple</p>
   <p>10. const val</p>
   <p>11. Destructuring Declaration</p>
+  <p>12. 변수 값으로 활용할 수 있는 try/catch 와 if절</p>
   <p>base/BaseGrammer.kt</p>
 </details>
 <details>
@@ -65,9 +66,10 @@
   <p>case 8. class parameter에 받은 일반 변수의 Default 값 설정 가능.</p>
   <p>case 9. open class</p>
   <p>case 10. 상속과 구현 차이</p>
-  <p>case 11. protected 및 internal</p>
+  <p>case 11. protected 및 internal</p>c
   <p>case 12. nested class / inner class</p>
-  <p>case 13. data class</p>
+  <p>case 13. inner class의 outer class 자원 사용 방법</p>
+  <p>case 14. data class</p>
   <p>base/BaseClass.kt</p>
 </details>
 <details>
